@@ -1,0 +1,111 @@
+.app__login-container {
+  background-color: var(--bgPrimary);
+  display: flex;
+  align-items: top;
+  padding: 2em;
+  padding-right: 0;
+
+  .app__login-left {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding: 2em;
+    padding-right: 0;
+    overflow: hidden;
+  }
+  .app__login-icon {
+    margin-bottom: 4em;
+  }
+  .app__login-main {
+    margin-right: 3em;
+    .app__login-form {
+      margin-bottom: 2em;
+      color: var(--fontPrimary);
+    }
+    .app__login__form-input {
+      width: 100%;
+      accent-color: var(--fontPrimary);
+    }
+    .app__login-form-button {
+      border: 1px solid var(--fontPrimary);
+      width: 100%;
+      border-radius: 1em;
+      background-color: var(--bgPrimary);
+      color: var(--fontPrimary);
+      padding-top: 6px;
+      padding-bottom: 6px;
+      margin-top: 2em;
+
+      &:hover {
+        background-color: rgb(198, 193, 193);
+        color: rgb(51, 50, 50);
+        cursor: pointer;
+      }
+    }
+    .app__login-textButton {
+      display: flex;
+      justify-content: center;
+      .app__login-shopButton {
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+  .app__login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    .app__login-bgImg {
+      img {
+        width: 780px;
+        @media screen and (max-width: 1240px) {
+          width: 400px;
+          height: 400px;
+        }
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 5em;
+    padding-left: 10em;
+    padding-left: 10em;
+  }
+  @media screen and (max-width: 1444px) {
+    padding: 5em;
+  }
+}
+
+.css-v4u5dn-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 2px solid var(--fontPrimary) !important;
+  font-family: "Source Code Pro", monospace !important;
+  font-size: 1em;
+  font-weight: 100;
+}
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+  color: var(--fontPrimary) !important;
+  font-family: "Source Code Pro", monospace !important;
+  font-size: 1em;
+  font-weight: 100 !important;
+}
+.css-v4u5dn-MuiInputBase-root-MuiInput-root {
+  border-bottom: 1px solid var(--fontPrimary) !important;
+}
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root:after {
+  color: var(--fontPrimary) !important;
+}
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: var(--fontPrimary) !important;
+}
+.css-1o5dra0-MuiFormControl-root-MuiTextField-root input {
+  color: white !important;
+}
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root {
+  color: antiquewhite !important;
+}
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+  color: white !important;
+}
