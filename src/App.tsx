@@ -7,6 +7,7 @@ import RequireAuth from "./helpers/auth/RequireAuth";
 import NoAuth from "./helpers/auth/NoAuth";
 
 import "./App.css";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           <Route element={<NoAuth />}>
             <Route path="/login" element={<Login />} />
           </Route>
+
+          /** page not found */
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </>
