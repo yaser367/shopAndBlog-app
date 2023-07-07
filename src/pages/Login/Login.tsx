@@ -1,11 +1,34 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import LogBg from "../../assets/Images/LoginImg-bg.png";
 import LogLogo from "../../assets/Images/PureBeaty-logo.png";
+import { TextField } from "@mui/material";
+import { tokenInstance } from "../../config/axios";
+import { useNavigate } from "react-router-dom";
 
 import "./Login.scss";
-import { TextField } from "@mui/material";
 
 const Login = () => {
+  const [username, setusername] = useState("");
+  const [password, setpassword] = useState("");
+  const navigate = useNavigate();
+
+  /** login functionality */
+  const handleLogin = async () => {
+    try {
+      const res = await tokenInstance.post("", { username, password });
+      if (res.status === 200) {
+        /** setting token to localstorage */
+        localStorage.setItem("pureBeautyToken", res.data.jwt_token);
+        navigate("/");
+      } else {
+        console.log("incorrect email&password");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <div className="app__login-container">
@@ -28,6 +51,7 @@ const Login = () => {
                 className="app__login__form-input"
                 label="Username"
                 variant="standard"
+                onChange={(e) => setusername(e.target.value)}
               />
             </div>
             <div className="app__login-form">
@@ -43,15 +67,18 @@ const Login = () => {
                 className="app__login__form-input"
                 label="Password"
                 variant="standard"
+                onChange={(e) => setpassword(e.target.value)}
               />
             </div>
             <div className="app__login-form">
-              <button className="app__login-form-button">LOGIN</button>
+              <button className="app__login-form-button" onClick={handleLogin}>
+                LOGIN
+              </button>
             </div>
             <div className="app__login-form">
               <div className="app__login-textButton">
                 <span className="">LOGIN OR</span>
-                <Link to={"/shop"} className="link">
+                <Link to={"/shop"} className="shopText">
                   <span className="app__login-shopButton ">&nbsp; SHOP</span>
                 </Link>
               </div>

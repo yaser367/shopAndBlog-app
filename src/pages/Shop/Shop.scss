@@ -1,0 +1,28 @@
+.app__shop-container {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 99.4%;
+  .app__shop-products {
+    background-color: var(--fontPrimary);
+    aspect-ratio: 1;
+    border: 1px solid var(--bgPrimaryFade);
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .app__shop-imgText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2000;
+    bottom: 10px;
+    left: 30px;
+  }
+  .shopTitle {
+    color: var(--bgPrimary);
+  }
+}

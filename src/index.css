@@ -2,6 +2,7 @@
   --bgPrimary: #842a3a;
   --bgPrimaryFade: #842a3b5d;
   --fontPrimary: #fdf2db;
+  --bgSecondary:rgb(219, 211, 211);
 }
 body {
   font-family: "Source Code Pro", monospace;

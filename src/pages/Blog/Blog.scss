@@ -1,0 +1,22 @@
+.app__blog-container {
+  background-color: var(--fontPrimary);
+  padding: 3em 5em;
+  img {
+    border: 1px solid transparent;
+    border-radius: 1em;
+    width: 100%;
+ 
+  }
+  .app__blog-textContainer {
+    color: var(--bgPrimary);
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+  .app__blog-text {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}

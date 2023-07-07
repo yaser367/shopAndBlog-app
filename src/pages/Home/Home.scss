@@ -1,18 +1,24 @@
-.app__home {
-    width: 600px;
-    height: 600px;
-    background: red;
+.app__home-container {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1px;
+    position: relative;
+    @media screen and (max-width: 1200px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+      }
+      @media screen and (max-width: 600px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+      }
   }
+.app_blog-img {
+    display: flex;
+    img{
+        width: 100%;
+    }
+}
   
-//   @media screen and (max-width: 1200px) {
-//     .homeContainer {
-//       display: grid;
-//       grid-template-columns: 1fr 1fr 1fr;
-//     }
-//   }
-//   @media screen and (max-width: 600px) {
-//     .homeContainer {
-//       display: grid;
-//       grid-template-columns: 1fr 1fr;
-//     }
-//   }
+ 
+ 

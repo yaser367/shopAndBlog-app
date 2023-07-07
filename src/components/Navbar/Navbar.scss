@@ -1,0 +1,33 @@
+.app__navbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: var(--fontPrimary);
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  .app__navbar-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--bgPrimary);
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .app__navbar-logout {
+    position: fixed;
+    right: 1%;
+    color: var(--bgPrimary);
+    font-weight: 500;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 1em 5px;
+  }
+  img{
+    @media screen and (max-width: 500px) {
+        width: 60%;
+      }
+  }
+}
